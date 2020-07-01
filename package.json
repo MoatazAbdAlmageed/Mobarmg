@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js add --name='moataz' --age=30"
+    "start": "nodemon index.js add --name='moataz' --age=30",
+    "weather": "nodemon weather.js --city='Cairo'"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,9 @@
     "yargs": "^15.1.0"
   },
   "dependencies": {
-    "nodemon": "^2.0.4"
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
+    "openweather-apis": "^4.3.1"
   }
 }
