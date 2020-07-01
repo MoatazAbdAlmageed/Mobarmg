@@ -30,11 +30,10 @@ fs.readFile(dir + "/weather.json", function (err, data) {
   } else {
     const _data = JSON.parse(data);
     var filtered = _data.filter(function (el) {
-      return !el[argv.name];
+      return !el[argv.city];
     });
-
     weather.getAllWeather(function (err, JSONObj) {
-      filtered.push({ [argv.name]: JSONObj });
+      filtered.push({ [argv.city]: JSONObj });
       fs.writeFileSync(dir + "/weather.json", JSON.stringify(filtered));
     });
   }
